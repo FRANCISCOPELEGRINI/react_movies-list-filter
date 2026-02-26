@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const MoviesList: React.FC<Props> = ({ movies, query }) => {
-  const normalizedQuery = query.toLowerCase();
+  const normalizedQuery = query.trim().toLowerCase();
 
   const visibleMovies = movies.filter(
     movie =>
